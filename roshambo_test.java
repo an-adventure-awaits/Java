@@ -1,7 +1,7 @@
 import java.util.Scanner;
 
     
-public class test{
+public class roshambo_test{
     public static void main(String[] args) {
         
         Scanner keyboard = new Scanner(System.in);
