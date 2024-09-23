@@ -17,6 +17,7 @@ public class roshambo{
             int rock;
             int paper;
             int scissors;
+            int score_computer;
             
             //title
             System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~");
@@ -26,24 +27,28 @@ public class roshambo{
             System.out.println("\n Rock = 1, \n Paper = 2, \n Scissors =3");
             System.out.print("What is your number? ");
 
-            computer += 1;
+            score_computer += 1;
             user += 1;
             rock = 1;
             paper = 2;
             scissors = 3;
 
 
+            
 
-            if computer == "rock";
+            if (computer == "1") {
 
-                if user == "rock";
+                if (user == "rock") {
                 System.out.println("You picked rock!");
+                }
 
                 else if == "paper";
                 System.out.println("You picked paper!");
 
                 else if == "scissors";
                 System.out.println("You picked scissors!");
+
+            
 
                 
             
