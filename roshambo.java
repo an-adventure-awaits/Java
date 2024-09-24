@@ -33,11 +33,12 @@ public class roshambo{
 
             System.out.println("\n Rock = 1, \n Paper = 2, \n Scissors = 3,");
 
+            
+            System.out.print("What number do you pick? ");
             int user = keyboard.nextInt();
-            System.out.print("What is the number? ");
 
 
-
+            
             // if 
             if (computer == rock) {
 
