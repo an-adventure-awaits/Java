@@ -4,80 +4,91 @@
 // Purpose: roshambo
 
 import java.util.Scanner;
+import java.util.Random;
 
     
 public class roshambo{
     public static void main(String[] args) {
         
+        // input Scanner
         Scanner keyboard = new Scanner(System.in);
+
+        // Random integer
+        Random rand = new Random();
+
+
         
-            int computer;
-            int user;
-            int user_input;
-            int rock;
-            int paper;
-            int scissors;
-            int score_computer;
+            // variables
+            int computer = rand.nextInt(1,4);
+            int rock = 1;
+            int paper = 2;
+            int scissors = 3;
+            int score_computer =+ 1;
+            int score_user =+ 1;
             
             //title
             System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~");
             System.out.println("~  THE EPIC ROSHAMBO!!!  ~");
             System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~");
 
-            System.out.println("\n Rock = 1, \n Paper = 2, \n Scissors =3");
-            System.out.print("What is your number? ");
+            System.out.println("\n Rock = 1, \n Paper = 2, \n Scissors = 3,");
 
-            score_computer += 1;
-            user += 1;
-            rock = 1;
-            paper = 2;
-            scissors = 3;
+            int user = keyboard.nextInt();
+            System.out.print("What is the number? ");
 
 
-            
 
-            if (computer == "1") {
+            // if 
+            if (computer == rock) {
 
-                if (user == "rock") {
+                if (user == rock) {
                 System.out.println("You picked rock!");
                 }
 
-                else if == "paper";
+                else if (user == paper) {
                 System.out.println("You picked paper!");
+                }
 
-                else if == "scissors";
+                else if (user == scissors) {
                 System.out.println("You picked scissors!");
+                }
+                }
 
             
+            // else if 
+            else if (computer == paper) {
 
-                
-            
-            else if computer == "paper";
-
-                if user == "rock";
+                if (user == rock) {
                 System.out.println("You picked rock!");
+                }
 
-                else if == "paper";
+                else if (user == paper) {
                 System.out.println("You picked paper!");
+                }
 
-                else if == "scissors";
+                else if (user == scissors) {
                 System.out.println("You picked scissors!");
+                }}
                 
 
+            // else if 
+            else if (computer == scissors) {
 
-            else if computer == "scissors";
-
-                if user == "rock";
+                if (user == rock) {
                 System.out.println("You picked rock!");
+                }
 
-                else if == "paper";
+                else if (user == paper) {
                 System.out.println("You picked paper!");
+                }
 
-                else if == "scissors";
+                else if (user == scissors) {
                 System.out.println("You picked scissors!");
+                }
+                }
+                
 
-
-
+        // close out program
         keyboard.close();
 
     }
