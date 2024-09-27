@@ -18,86 +18,108 @@ public class roshambo{
 
 
         
-            // variables
-            int computer = rand.nextInt(1,4);
-            int rock = 1;
-            int paper = 2;
-            int scissors = 3;
-            int score_computer =+ 1;
-            int score_user =+ 1;
-            int running_total = 0;
-            int still_running = 4;
-            int computer_win = 0;
-            int player_win = 0;
+        // variables
+        int computer = rand.nextInt(1,4);
+        int rock = 1;
+        int paper = 2;
+        int scissors = 3;
+        int score_computer;
+        int score_user;
+        int running_total = 0;
+        int computer_win = 0;
+        int player_win = 0;
+        int still_running = 4;
+
 
             
-            //title
-            System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~");
-            System.out.println("~  THE EPIC ROSHAMBO!!!  ~");
-            System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        //title
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        System.out.println("~  THE EPIC ROSHAMBO!!!  ~");
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~");
 
-            //loop
-            while (still_running == 4) {
-                System.out.println("\n Rock = 1, \n Paper = 2, \n Scissors = 3,");
+        //loop
+        //while (still_running == 4) {
+        System.out.println("\n Rock = 1, \n Paper = 2, \n Scissors = 3,");
 
+        
+        System.out.print("What number do you pick? ");
+        int user_choice = keyboard.nextInt();
+
+
+        // if 
+        if (user_choice == rock) {
+
+            if (computer == rock) {
+
+            System.out.println("You picked rock...and you tied:/");
+            computer_win += 1;
+            player_win += 1;
+
+            }
+
+            else if (computer == paper) {
+            System.out.println("You picked paper!\n You won! Yay!!!:)");
+            player_win += 1;
+            }
+
+            else if (computer == scissors) {
+            System.out.println("You lost!");
+            computer_win += 1;
+            }
+            }
+
+        
+        // else if 
+        else if (computer == paper) {
+
+            if (user_choice == rock) {
+            System.out.println("You picked rock!");
+            computer_win += 1;
+            String score = String.format("%s","The score is Computer: "computer_win," and Player: "player_win);
+            System.out.println(score);
+            }
+
+            else if (user_choice == paper) {
+            System.out.println("You picked paper!");
+            computer_win += 1;
+            player_win += 1;
+            }
+
+            else if (user_choice == scissors) {
+            System.out.println("You picked scissors!");
+            player_win += 1;
+            }}
+            
+
+        // else if 
+        else if (computer == scissors) {
+
+            if (user_choice == rock) {
+            System.out.println("You picked rock!");
+            player_win += 1;
+            }
+
+            else if (user_choice == paper) {
+            System.out.println("You picked paper!");
+            computer_win += 1;
+            }
+
+            else if (user_choice == scissors) {
+            System.out.println("You picked scissors!");
+            computer_win += 1;
+            player_win += 1;
+            }
+        //}
+    }
+    
+    //System.out.println("Enter '4' to continue");
+    //still_running = keyboard.nextInt();
+    
+    
                 
-                System.out.print("What number do you pick? ");
-                int user = keyboard.nextInt();
 
-
-                // if 
-                if (computer == rock) {
-
-                    if (user == rock) {
-
-                    System.out.println("You picked rock!");
-                    }
-
-                    else if (user == paper) {
-                    System.out.println("You picked paper!");
-                    }
-
-                    else if (user == scissors) {
-                    System.out.println("You picked scissors!");
-                    }
-                    }
-
-                
-                // else if 
-                else if (computer == paper) {
-
-                    if (user == rock) {
-                    System.out.println("You picked rock!");
-                    }
-
-                    else if (user == paper) {
-                    System.out.println("You picked paper!");
-                    }
-
-                    else if (user == scissors) {
-                    System.out.println("You picked scissors!");
-                    }}
-                    
-
-                // else if 
-                else if (computer == scissors) {
-
-                    if (user == rock) {
-                    System.out.println("You picked rock!");
-                    }
-
-                    else if (user == paper) {
-                    System.out.println("You picked paper!");
-                    }
-
-                    else if (user == scissors) {
-                    System.out.println("You picked scissors!");
-                    }
-                    }}
-                    
-
-        // close out program
-        keyboard.close();
+    // close out program
+    keyboard.close();
 
     }
 }
