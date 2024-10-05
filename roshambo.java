@@ -6,8 +6,7 @@
 import java.util.Scanner;
 import java.util.Random;
 
-    
-public class roshambo{
+public class roshambo {
     public static void main(String[] args) {
         
         // input Scanner
@@ -37,8 +36,9 @@ public class roshambo{
         System.out.println("~  THE EPIC ROSHAMBO!!!  ~");
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~");
 
+       
         //loop
-        //while (still_running == 4) {
+        while (still_running == 4) {
         System.out.println("\n Rock = 1, \n Paper = 2, \n Scissors = 3,");
 
         
@@ -75,8 +75,7 @@ public class roshambo{
             if (user_choice == rock) {
             System.out.println("You picked rock!");
             computer_win += 1;
-            String score = String.format("%s","The score is Computer: "computer_win," and Player: "player_win);
-            System.out.println(score);
+            
             }
 
             else if (user_choice == paper) {
@@ -111,17 +110,17 @@ public class roshambo{
             }
         //}
     }
+
+    String score = String.format("The score is Computer: %d, and Player: %d", computer_win, player_win);
+    System.out.println(score);
+    
     
     //System.out.println("Enter '4' to continue");
     //still_running = keyboard.nextInt();
-    
-    
-                
+          
 
     // close out program
     keyboard.close();
 
     }
-}
-
-    
+}}
