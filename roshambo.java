@@ -22,9 +22,6 @@ public class roshambo {
         int rock = 1;
         int paper = 2;
         int scissors = 3;
-        int score_computer;
-        int score_user;
-        int running_total = 0;
         int computer_win = 0;
         int player_win = 0;
         
@@ -38,16 +35,18 @@ public class roshambo {
 
        
         
-            System.out.println("\n Rock = 1, \n Paper = 2, \n Scissors = 3, \n Quit = 4");
-
-        
-        
-            System.out.print("What number do you pick? ");
-            int user_choice = keyboard.nextInt();
+            
         
         //loop
-        while (user_choice < 4) {
 
+        System.out.println("\n Rock = 1, \n Paper = 2, \n Scissors = 3, \n Quit = 4");
+
+    
+            System.out.print("What number do you pick? ");
+            int user_choice = keyboard.nextInt();
+             
+        while (user_choice < 4) {
+            
             // if 
             if (user_choice == rock) {
 
@@ -110,19 +109,26 @@ public class roshambo {
                 computer_win += 1;
                 player_win += 1;
                 }
-            
+            }
             
 
+        //str still_running = "y";
+        //String still_running = String.format("");
         String score = String.format("The score is Computer: %d, and Player: %d", computer_win, player_win);
         System.out.println(score);
         
         
-        //System.out.println("Enter '4' to continue");
-        //still_running = keyboard.nextInt();
-          
+        System.out.println("Enter '4' to exit");
+        user_choice = keyboard.nextInt();
+    
 
-    // close out program
-    keyboard.close();
+    
 
     //}
-}}}
+}
+// close out program
+keyboard.close();
+
+
+}
+}
