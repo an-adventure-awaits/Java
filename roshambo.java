@@ -5,6 +5,7 @@
 
 import java.util.Scanner;
 import java.util.Random;
+import javax.swing.JOptionPane;
 
 public class roshambo {
     public static void main(String[] args) {
@@ -15,7 +16,6 @@ public class roshambo {
         // Random integer
         Random rand = new Random();
 
-
         
         // variables
         int computer = rand.nextInt(1,4);
@@ -24,26 +24,26 @@ public class roshambo {
         int scissors = 3;
         int computer_win = 0;
         int player_win = 0;
+        int user_choice;
         
-        
-
-            
+      
         //title
-        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~");
-        System.out.println("~  THE EPIC ROSHAMBO!!!  ~");
-        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        
+        JOptionPane.showMessageDialog(null, "THE EPIC ROSHAMBO!!!\nWelcome to Roshambo! I am your host for today and since today's a great day, let's have a great game!\nBefore we start I need to give you some ground rules. Well, only two rules, and these rules are have fun and win lots!\nTo start the game, I will give you four options to choose from. These options are...\nRock = 1,\tPaper = 2,\tScissors = 3,\tQuit = 4\nSo, why dont you choose an option?");
 
-       
+        user_choice = Integer.parseInt(JOptionPane.showInputDialog(null,"What number do you choose? "));
+
+        JOptionPane.showMessageDialog(null, "You chose number " + user_choice);
         
-            
-        
+        if (user_choice == 4) {
+            JOptionPane.showMessageDialog(null, "Since you chose '4'...the game was quit. Thank you for playing!!!");
+        }
+
         //loop
+        //System.out.println("\n Rock = 1, \n Paper = 2, \n Scissors = 3, \n Quit = 4");
 
-        System.out.println("\n Rock = 1, \n Paper = 2, \n Scissors = 3, \n Quit = 4");
-
-    
-            System.out.print("What number do you pick? ");
-            int user_choice = keyboard.nextInt();
+            //System.out.print("What number do you pick? ");
+            //int user_choice = keyboard.nextInt();
              
         while (user_choice < 4) {
             
