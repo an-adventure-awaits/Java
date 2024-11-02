@@ -52,19 +52,19 @@ public class roshambo {
 
                 if (computer == rock) {
 
-                System.out.println("You picked rock...and you tied:/");
+                JOptionPane.showMessageDialog(null, "You picked rock...and you tied:/");
                 computer_win += 1;
                 player_win += 1;
 
                 }
 
                 else if (computer == paper) {
-                System.out.println("You picked paper!\n You won! Yay!!!:)");
+                    JOptionPane.showMessageDialog(null, "You picked paper!\n You won! Yay!!!:)");
                 player_win += 1;
                 }
 
                 else if (computer == scissors) {
-                System.out.println("You lost!");
+                    JOptionPane.showMessageDialog(null, "You lost!");
                 computer_win += 1;
                 }
                 }
@@ -74,19 +74,19 @@ public class roshambo {
             else if (computer == paper) {
 
                 if (user_choice == rock) {
-                System.out.println("You picked rock!");
+                    JOptionPane.showMessageDialog(null, "You picked rock!");
                 computer_win += 1;
                 
                 }
 
                 else if (user_choice == paper) {
-                System.out.println("You picked paper!");
+                    JOptionPane.showMessageDialog(null, "You picked paper!");
                 computer_win += 1;
                 player_win += 1;
                 }
 
                 else if (user_choice == scissors) {
-                System.out.println("You picked scissors!");
+                    JOptionPane.showMessageDialog(null, "You picked scissors!");
                 player_win += 1;
                 }}
                 
@@ -95,17 +95,17 @@ public class roshambo {
             else if (computer == scissors) {
 
                 if (user_choice == rock) {
-                System.out.println("You picked rock!");
+                    JOptionPane.showMessageDialog(null, "You picked rock!");
                 player_win += 1;
                 }
 
                 else if (user_choice == paper) {
-                System.out.println("You picked paper!");
+                    JOptionPane.showMessageDialog(null, "You picked paper!");
                 computer_win += 1;
                 }
 
                 else if (user_choice == scissors) {
-                System.out.println("You picked scissors!");
+                    JOptionPane.showMessageDialog(null, "You picked scissors!");
                 computer_win += 1;
                 player_win += 1;
                 }
@@ -114,11 +114,11 @@ public class roshambo {
 
         //str still_running = "y";
         //String still_running = String.format("");
-        String score = String.format("The score is Computer: %d, and Player: %d", computer_win, player_win);
-        System.out.println(score);
+        JOptionPane.showMessageDialog(null,"The score is Computer: " + computer_win + " and Player: " + player_win);
+        //JOptionPane.showMessageDialog(score);
         
         
-        System.out.println("Enter '4' to exit");
+        JOptionPane.showMessageDialog(null, "Enter '4' to exit");
         user_choice = keyboard.nextInt();
     
 
